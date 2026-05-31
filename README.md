@@ -269,5 +269,5 @@ The frontend talks to `http://localhost:8080`. CORS is configured server-side to
 
 Built for the Airtribe Backend Engineering Launchpad case study. Mentor feedback shaped the design — particularly the discussion around container pre-warming, which is documented as the v2 roadmap in DESIGN.md.
 
-##Author
+## Author
 **Sumanth Gannamaneedi** Assisted by Claude AI(Vibe Coding)
