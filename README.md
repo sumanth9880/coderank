@@ -41,6 +41,7 @@ The platform is designed to execute code it does not trust. Every submission run
 | 6. Resource management | Each container is constrained to 256 MB memory (swap disabled), 0.5 CPU, 64 processes. Cleanup is guaranteed via `try/finally`. |
 | Bonus: authentication & authorization | JWT (HS384) issued on register/login; stateless verification on every request. Submissions are user-scoped — a user cannot read another user's results even if they guess the UUID. |
 | Bonus: rate limiting | Per-user token bucket (10 submissions/minute, burst-friendly) via Bucket4j. |
+| 1. Language support | `languages` table maps each `(name, version)` to a Docker image and run command. Adding a language is a single Flyway migration + a Docker image. v1 ships with **Python 3.11**. **Java 21**, and **JavaScript (Node 20)**. |
 
 ---
 
@@ -251,6 +252,7 @@ The frontend talks to `http://localhost:8080`. CORS is configured server-side to
     │       └── db/migration/
     │           ├── V1__init_schema.sql
     │           └── V2__seed_languages.sql
+    |           └── V3__add_java_javascript.sql
     └── test/                                  sparse v1 — see DESIGN.md "Known limitations"
 ```
 

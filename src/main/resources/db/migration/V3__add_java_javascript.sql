@@ -1,0 +1,3 @@
+INSERT INTO languages (name, version, docker_image, source_file, run_command) VALUES
+                                                                                  ('java',       '21', 'eclipse-temurin:21-jdk', 'Main.java', 'java Main.java'),
+                                                                                  ('javascript', '20', 'node:20-slim',           'main.js',   'node main.js');
